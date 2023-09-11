@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Comfortaa";
+  src: url(/assets/fonts/Comfortaa/static/Comfortaa-Regular.ttf) format("truetype");
+}
+
+
+main {
+  font-family: "Comfortaa";
+  width: 210mm;
+  padding: 20px 60px;
+  border: 1px solid #D2D2D2; 
+  background: #fff;
+  margin: 10px auto;
+}
+
+pre {
+  max-width: fit-content;
+}

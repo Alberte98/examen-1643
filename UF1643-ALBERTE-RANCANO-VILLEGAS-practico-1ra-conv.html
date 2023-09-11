@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan para el análisis de seguridad de un si basado en Wordpress</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+
+  <main>
+    <h1>Plan para el análisis de seguridad de un si basado en Wordpress</h1>
+    <h2>Enunciado:</h2>
+    <h3><span style="font-size: larger;">1. </span>Elabora un plan para el análisis de seguridad de un sistema de
+      información basado en
+      Wordpress.</h3>
+    <div>
+      <h2>Paso 1: Recopilación de información</h2>
+      <h4>1.1. Una única instalación de wordpress, en la versión 6.3.1, montada sobre un Apache2
+        utilizando como SGBD Phpmyadmin con PHP 8.1.2 y como BBDD Mariadb Ver 15.1.
+      </h4>
+      <h4>1.2. Identificación de plugins y temas instalados, así como sus versiones.</h4>
+      <ul>
+        <li><strong>Tema: </strong>Color NewsmagazineVersión en la verión 1.2.7</li>
+        <li><strong>Plugins: </strong>Yoast SEO 21.1, Protección Anti-Spam Akismet 5.2, WooCommerce 1.23.10 y
+          Wordfence Security 7.10.3</li>
+      </ul>
+
+      <h2>Paso 2: Evaluación de vulnerabilidades</h2>
+      <h4>
+        2.1. Utilizando herramientas de escaneo de seguridad como Wordfence Security para identificar vulnerabilidades
+        conocidas en WordPress y sus componentes (plugins, temas, núcleo).
+      </h4>
+      <p><strong>Wordfence Security (Plugin de WordPress):</strong> es un popular plugin de seguridad para WordPress que
+        incluye un escáner de seguridad en tiempo real. Puede escanear tu sitio web en busca de vulnerabilidades
+        conocidas, malware y otros problemas de seguridad. Además, ofrece cortafuegos y otras características de
+        seguridad.</p>
+
+      <h4>2.2. Verificar si se están utilizando versiones actualizadas de WordPress, plugins y temas.</h4>
+      <h4>2.3. Realizar pruebas de penetración para descubrir vulnerabilidades no conocidas.</h4>
+      <p>Para ello se seguiran los siguientes pasos</p>
+
+      <ul>
+        <li><strong>Paso 1:</strong> Definir el alcance de las pruebas</li>
+        <li><strong>Paso 2:</strong> Obtener el consentimiento y autorización</li>
+        <li><strong>Paso 3:</strong> Recopilar información</li>
+        <li><strong>Paso 4:</strong> Identificar posibles puntos de entrada</li>
+        <li><strong>Paso 5:</strong> Realizar pruebas de seguridad:
+          <ul>
+            <li>
+              <strong>5.1.</strong> Escaneo de vulnerabilidades automatizado
+            </li>
+            <li>
+              <strong>5.2.</strong> Pruebas de inyección de SQL
+            </li>
+            <li>
+              <strong>5.3.</strong> Pruebas de cross-site scripting o request forgery (XSS, CSRF)
+            </li>
+            <li>
+              <strong>5.4.</strong> Pruebas de autenticación y autorización
+            </li>
+        </li>
+      </ul>
+      <li><strong>Paso 6:</strong> Documentar resultados:</li>
+      <li><strong>Paso 7:</strong> Informar y remediar:</li>
+      <li><strong>Paso 8:</strong> Realizar pruebas de confirmación:</li>
+      <li><strong>Paso 9:</strong> Revisión continua</li>
+
+      </ul>
+
+      <h2>Paso 3: Análisis de configuración</h2>
+      <p>
+        <strong>3.1. Revisar la configuración de WordPress:</strong> garantizar que las mejores prácticas de
+        seguridad se estén siguiendo, como la restricción de acceso a archivos sensibles, la deshabilitación de la
+        edición de archivos desde el panel de administración, entre otros.
+      </p>
+      <p>
+        <strong>3.2. Evaluar la configuración de permisos en archivos y directorios</strong> para asegurarse de que los
+        usuarios no autorizados no tengan acceso a información crítica.
+      </p>
+
+      <h2>Paso 4: Evaluación de plugins y temas</h2>
+      <h4>4.1. Realizar una auditoría de todos los plugins y temas instalados en busca de vulnerabilidades conocidas o
+        problemas de seguridad.</h4>
+      <p>Desde el panel de control de Wordpress, ir al listado de plugins y temas, y verificar de forma infividual
+        cada uno de ellos, y realizar los siguientes pasos:
+      </p>
+      <ul>
+        <li>Versión utilizada</li>
+        <li>Escanearo con herramientas de escaneo de seguridad (como WPScan o Nessus)</li>
+        <li>Fiabilidad del plugin o tema</li>
+        <li>Desactivar o eliminar los que generen incompatibilidades</li>
+        <li>Realizar pruebas de funcionalidad</li>
+        <li>Documentar los resultados</li>
+      </ul>
+
+
+      <h2>Paso 5: Gestión de usuarios y contraseñas</h2>
+      <h4>5.1. Revisar la lista de usuarios registrados en WordPress y eliminar cuentas innecesarias o no autorizadas.</h4>
+      <p>Como podrían ser usuario antiguos que ya no forman parte del cms, cuentas de spam, cuentas dublicadas, e.t.c.</p>
+      <h4>5.2. Fomentar el uso de contraseñas seguras y políticas de contraseña robustas.</h4>
+      <p>Mediante el uso de algun plugin se puede facilitar este proces. Por ejemplo con el plugin SecuPress</p>
+      <h4>
+        5.3. Considerar la implementación de autenticación de dos factores (2FA) para los usuarios con privilegios
+        elevados.
+      </h4>
+      
+      Paso 6: Seguridad de la red y el servidor
+      6.1. Configurar reglas de firewall para limitar el tráfico no deseado.
+      6.2. Mantener el servidor y su software actualizado con parches de seguridad.
+      6.3. Considerar la implementación de un servicio de monitoreo de seguridad para detectar intrusiones.
+
+      Paso 7: Copias de seguridad y recuperación
+      7.1. Establecer un plan de copias de seguridad regulares que incluya la base de datos y los archivos del sitio
+      web.
+      7.2. Probar regularmente la restauración de copias de seguridad para asegurarse de que el proceso funcione
+      correctamente.
+
+      Paso 8: Educación y concienciación
+      8.1. Capacitar a los administradores y usuarios sobre buenas prácticas de seguridad.
+      8.2. Fomentar la identificación de posibles amenazas y cómo informarlas.
+
+      Paso 9: Documentación y seguimiento
+      9.1. Documentar todos los hallazgos, recomendaciones y acciones tomadas durante el análisis de seguridad.
+      9.2. Establecer un programa de seguimiento y revisión periódica para garantizar que las medidas de seguridad se
+      mantengan actualizadas.
+
+      Paso 10: Implementación de medidas correctivas
+      10.1. Implementar las recomendaciones y medidas correctivas identificadas durante el análisis.
+      10.2. Realizar pruebas posteriores a la implementación para verificar la efectividad de las soluciones aplicadas.
+
+      Paso 11: Monitoreo continuo
+      11.1. Establecer un sistema de monitoreo continuo para detectar y responder a amenazas en tiempo real.
+      11.2. Mantenerse actualizado sobre las nuevas vulnerabilidades y amenazas de seguridad que puedan afectar a
+      WordPress y sus componentes.
+    </div>
+
+
+  </main>
+
+</body>
+
+</html>

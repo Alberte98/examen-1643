@@ -14,9 +14,13 @@
     <div class="pagina">
       <h1>Plan para el análisis de seguridad de un si basado en Wordpress</h1>
       <h2>Enunciado:</h2>
+
+      <hr>
       <h3><span style="font-size: larger;">1. </span>Elabora un plan para el análisis de seguridad de un sistema de
         información basado en
         Wordpress.</h3>
+
+        <hr>
       <h2>Paso 1: Recopilación de información</h2>
       <h4> Habrá que llevar a cabo las siguientes indicaciones:</h4>
       <ul>
@@ -74,30 +78,32 @@
           través de Internet.</li>
         <li>Evalúa las amenazas naturales, como terremotos, tormentas o inundaciones, que podrían afectar la ubicación
           física del sistema.</li>
-        <li><strong>Escenarios de Amenaza:</strong> Para cada amenaza identificada, crea escenarios de amenaza específicos que describan
+        <li><strong>Escenarios de Amenaza:</strong> Para cada amenaza identificada, crea escenarios de amenaza
+          específicos que describan
           cómo podría ocurrir la amenaza y qué impacto tendría en el sistema.</li>
-        <li><strong>Priorización de Amenazas:</strong> Clasifica las amenazas identificadas según su probabilidad de ocurrencia y su impacto en el sistema. Esto ayudará a centrar tus esfuerzos en las amenazas más críticas.</li>
+        <li><strong>Priorización de Amenazas:</strong> Clasifica las amenazas identificadas según su probabilidad de
+          ocurrencia y su impacto en el sistema. Esto ayudará a centrar tus esfuerzos en las amenazas más críticas.</li>
       </ul>
 
 
       <h2>Paso 3: Identificación de vulnerabilidades</h2>
       <h4>
-        2.2. Utilizando herramientas de escaneo de seguridad como Wordfence Security para identificar vulnerabilidades
+        3.1. Utilizando herramientas de escaneo de seguridad como Wordfence Security para identificar vulnerabilidades
         conocidas en WordPress y sus componentes (plugins, temas, núcleo).
       </h4>
       <p><strong>Wordfence Security (Plugin de WordPress):</strong> es un popular plugin de seguridad para WordPress
         que incluye un escáner de seguridad en tiempo real. Puede escanear tu sitio web en busca de vulnerabilidades
         conocidas, malware y otros problemas de seguridad. Además, ofrece cortafuegos y otras características de
         seguridad.</p>
-      <h4>2.3. Verificar si se están utilizando versiones actualizadas de WordPress, plugins y temas.</h4>
-      <h4>2.4. Realizar pruebas de penetración para descubrir vulnerabilidades no conocidas.</h4>
+      <h4>3.2. Verificar si se están utilizando versiones actualizadas de WordPress, plugins y temas.</h4>
+      <h4>3.3. Realizar pruebas de penetración para descubrir vulnerabilidades no conocidas.</h4>
       <p>Para ello se seguiran los siguientes pasos</p>
       <ul>
-        <li><strong>Paso 1:</strong> Definir el alcance de las pruebas</li>
-        <li><strong>Paso 2:</strong> Obtener el consentimiento y autorización</li>
-        <li><strong>Paso 3:</strong> Recopilar información</li>
-        <li><strong>Paso 4:</strong> Identificar posibles puntos de entrada</li>
-        <li><strong>Paso 5:</strong> Realizar pruebas de seguridad:
+        <li><strong>1:</strong> Definir el alcance de las pruebas</li>
+        <li><strong>2:</strong> Obtener el consentimiento y autorización</li>
+        <li><strong>3:</strong> Recopilar información</li>
+        <li><strong>4:</strong> Identificar posibles puntos de entrada</li>
+        <li><strong>5:</strong> Realizar pruebas de seguridad:
           <ul>
             <li>
               <strong>5.1.</strong> Escaneo de vulnerabilidades automatizado
@@ -113,64 +119,203 @@
             </li>
         </li>
       </ul>
-      <li><strong>Paso 6:</strong> Documentar resultados</li>
-      <li><strong>Paso 7:</strong> Informar y remediar</li>
-      <li><strong>Paso 8:</strong> Realizar pruebas de confirmación</li>
-      <li><strong>Paso 9:</strong> Revisión continua</li>
+      <li><strong>6:</strong> Documentar resultados</li>
+      <li><strong>7:</strong> Informar y remediar</li>
+      <li><strong>8:</strong> Realizar pruebas de confirmación</li>
+      <li><strong>9:</strong> Revisión continua</li>
       </ul>
     </div>
 
     <div class="pagina">
-      <h2>Paso 4: Analizarla configuración</h2>
+      <h2>Paso 4: Análisis de controles</h2>
       <p>
-        <strong>4.1. Revisar la configuración de WordPress:</strong> garantizar que las mejores prácticas de
-        seguridad se estén siguiendo, como la restricción de acceso a archivos sensibles, la deshabilitación de la
-        edición de archivos desde el panel de administración, entre otros.
-      </p>
-      <p>
-        <strong>4.2. Evaluar la configuración de permisos en archivos y directorios</strong> para asegurarse de que los
-        usuarios no autorizados no tengan acceso a información crítica.
-      </p>
-
-      <h2>Paso 5: Evaluar los plugins y los temas</h2>
-      <h4>5.1. Realizar una auditoría de todos los plugins y temas instalados en busca de vulnerabilidades conocidas o
-        problemas de seguridad.</h4>
-      <p>Desde el panel de control de Wordpress, ir al listado de plugins y temas, y verificar de forma infividual
-        cada uno de ellos, y realizar los siguientes pasos:
+        El análisis de controles implica evaluar los mecanismos de seguridad existentes en el sistema para determinar si
+        son adecuados para mitigar las amenazas y las vulnerabilidades identificadas previamente. A continuación, se
+        detallan los pasos para llevar a cabo esta etapa:
       </p>
       <ul>
-        <li>Versión utilizada</li>
-        <li>Escanearo con herramientas de escaneo de seguridad (como WPScan o Nessus)</li>
-        <li>Fiabilidad del plugin o tema</li>
-        <li>Desactivar o eliminar los que generen incompatibilidades</li>
-        <li>Realizar pruebas de funcionalidad</li>
-        <li>Documentar los resultados</li>
+
+        <li>
+          <strong>Enumerar Controles Existentes:</strong> Identifica y enumera todos los controles de seguridad
+          existentes en el sistema.
+          Esto incluye controles técnicos (firewalls, antivirus, sistemas de detección de intrusiones), controles de
+          políticas (políticas de acceso, políticas de contraseñas) y procedimientos operativos.
+        </li>
+
+        <li>
+          <strong>Evaluar la Efectividad:</strong> Evalúa la efectividad de cada control en relación con las amenazas y
+          vulnerabilidades
+          identificadas. ¿Los controles están diseñados adecuadamente? ¿Están configurados correctamente? ¿Están
+          actualizados?
+        </li>
+
+        <li>
+          <strong>Identificar Brechas en los Controles:</strong> Identifica cualquier brecha o deficiencia en los
+          controles actuales que no
+          sean adecuados para mitigar las amenazas o las vulnerabilidades identificadas.
+        </li>
+        <li>
+          <strong>Políticas de Seguridad:</strong> Revisa y evalúa las políticas de seguridad existentes para garantizar
+          que sean apropiadas
+          y estén alineadas con las necesidades del sistema y las mejores prácticas de seguridad.
+        </li>
+        <li>
+          <strong>Evaluación de Procesos:</strong> Evalúa los procesos de seguridad existentes, como la gestión de
+          parches, la gestión de
+          incidentes y las políticas de gestión de usuarios, para asegurarte de que sean efectivos y estén alineados con
+          los
+          objetivos de seguridad.
+        </li>
+
+        <li>
+          <strong>Verificación de Cumplimiento:</strong> Asegúrate de que todos los controles y políticas estén en
+          cumplimiento con las
+          regulaciones y normativas aplicables, como el RGPD, HIPAA o cualquier otro estándar relevante.
+        </li>
+        <li>
+          <strong>Revisión de Configuración:</strong> Verifica que las configuraciones de seguridad, como cortafuegos,
+          listas de control de
+          acceso y configuraciones de seguridad de aplicaciones, estén configuradas correctamente y sean coherentes con
+          las
+          mejores prácticas de seguridad.
+        </li>
+
+        <li>
+          <strong>Evaluación de Acceso y Autorización:</strong> Evalúa los sistemas de acceso y autorización para
+          asegurarte de que solo los
+          usuarios autorizados tengan acceso a recursos y datos específicos.
+        </li>
+        <li>
+          <strong>Identificación de Controles Faltantes:</strong> Identifica cualquier control de seguridad que pueda
+          faltar y que sea
+          necesario para mitigar riesgos específicos. Estos controles faltantes pueden incluir la implementación de
+          autenticación de dos factores o la configuración de copias de seguridad regulares.
+        </li>
+
+        <li>
+          <strong>Informe de Análisis de Controles:</strong> Documenta los resultados de tu análisis de controles,
+          resaltando las áreas donde
+          los controles actuales son efectivos y donde pueden necesitar mejoras.
+        </li>
+        <li>
+          <strong>Recomendaciones de Mejora:</strong> Basándote en el análisis, haz recomendaciones específicas para
+          mejorar o fortalecer los
+          controles de seguridad existentes.
+        </li>
       </ul>
 
 
-      <h2>Paso 6: Gestionar usuarios y contraseñas</h2>
-      <h4>6.1. Revisar la lista de usuarios registrados en WordPress y eliminar cuentas innecesarias o no autorizadas.
-      </h4>
-      <p>Como por ejemplo usuario antiguos que ya no forman parte del cms, cuentas de spam, cuentas duplicadas, e.t.c.
+
+
+      <h2>Paso 5: Determinar la probabilidad de ocurrencia</h2>
+
+      <p>
+        En esta etapa, se evalúa la probabilidad de que ocurran las amenazas identificadas. La probabilidad se puede
+        estimar de diversas formas, tanto cualitativas como cuantitativas. A continuación, se describen los pasos para
+        determinar la probabilidad de ocurrencia:
       </p>
-      <h4>6.2. Fomentar el uso de contraseñas seguras y políticas de contraseña robustas.</h4>
-      <p>Mediante el uso de algun plugin se puede facilitar este proces. Por ejemplo con el plugin SecuPress.
-        Considerar la implementación de autenticación de dos factores (2FA) para los usuarios con privilegios
-        elevados.</p>
+      <ul>
 
-      <h2>Paso 7: Seguridad de la red y el servidor</h2>
-      <h4>7.1. Configurar reglas de firewall para limitar el tráfico no deseado.</h4>
-      <p>En el análisis de seguridad, la configuración de reglas de firewall es esencial para controlar el tráfico no
-        deseado en el sistema basado en WordPress. Esto implica establecer reglas de entrada y salida para permitir el
-        tráfico necesario y bloquear el tráfico no autorizado. También se deben considerar reglas específicas para
-        aplicaciones de WordPress y servicios adicionales, junto con la monitorización constante y ajustes según sea
-        necesario para mantener un nivel óptimo de seguridad.</p>
-      <h4>7.2. Mantener el servidor y su software actualizado con parches de seguridad.</h4>
-      <h4>7.3. Considerar la implementación de un servicio de monitoreo de seguridad para detectar intrusiones.</h4>
+        <li>
+          <strong>Análisis Cualitativo:</strong> Puedes utilizar un enfoque cualitativo para estimar la probabilidad de
+          ocurrencia de cada
+          amenaza. Esto implica calificar la probabilidad como baja, moderada o alta, basándote en tu conocimiento y
+          experiencia. Por ejemplo, si sabes que tu sistema está bien protegido y monitoreado, es posible que califiques
+          la probabilidad de un ataque DDoS como baja.
+        </li>
 
+        <li>
+          <strong>Análisis Cuantitativo:</strong> Si tienes datos históricos o información sobre amenazas específicas,
+          puedes realizar un
+          análisis cuantitativo más preciso. Esto implica utilizar datos numéricos para calcular la probabilidad de
+          ocurrencia. Por ejemplo, podrías calcular la probabilidad de un ataque de fuerza bruta en función de la tasa
+          de
+          intentos de inicio de sesión fallidos en el pasado.
+        </li>
+
+        <li>
+          <strong>Revisar Estadísticas:</strong> Si es posible, revisa estadísticas históricas de amenazas y ataques
+          similares en sistemas
+          similares. Esto puede proporcionar una base sólida para estimar la probabilidad.
+        </li>
+
+        <li>
+          <strong>Consultar a Expertos:</strong> Puede ser útil consultar a expertos en seguridad cibernética o a
+          profesionales de tu
+          organización para obtener sus opiniones y evaluaciones sobre la probabilidad de ocurrencia.
+        </li>
+
+        <li>
+          <strong>Utilizar Datos de la Industria:</strong> Algunos sectores y organizaciones publican informes sobre
+          amenazas y
+          vulnerabilidades comunes. Estos informes pueden proporcionar información valiosa para estimar la probabilidad.
+        </li>
+
+        <li>
+          <strong>Asignar Niveles de Probabilidad:</strong> Para cada amenaza identificada, asigna un nivel de
+          probabilidad apropiado. Esto
+          puede expresarse como una probabilidad en porcentaje o en una escala cualitativa.
+        </li>
+      </ul>
+
+
+      <h2>Paso 6: Análisis de impacto</h2>
+      <p>
+        El análisis de impacto implica evaluar las consecuencias o el impacto que tendría la materialización de una
+        amenaza en el sistema. A continuación, se describen los pasos para llevar a cabo esta etapa:
+      </p>
+      <ul>
+        <li>
+          <strong>Identificación de Escenarios de Impacto:</strong> Para cada amenaza identificada, crea escenarios de
+          impacto específicos
+          que describan cómo afectaría la amenaza al sistema en términos de funcionalidad, integridad, confidencialidad
+          y disponibilidad.
+        </li>
+
+        <li>
+          <strong>Evaluación del Impacto:</strong> Evalúa el impacto potencial en el sistema en cada uno de estos
+          aspectos. Pregúntate cómo
+          afectaría la amenaza la capacidad del sistema para funcionar, la integridad de los datos, la confidencialidad
+          de la información y la disponibilidad de los recursos.
+        </li>
+
+        <li>
+          <strong>Clasificación del Impacto:</strong> Clasifica el impacto en una escala, como bajo, moderado o alto,
+          para cada aspecto evaluado. Esto te ayudará a entender la gravedad de las consecuencias.
+        </li>
+
+        <il>
+          <strong>Priorización de Escenarios:</strong> Prioriza los escenarios de impacto en función de su gravedad y su
+          probabilidad de
+          ocurrencia. Algunos escenarios pueden tener un impacto menor pero una alta probabilidad, mientras que otros
+          pueden tener un impacto catastrófico pero una baja probabilidad.
+        </il>
+
+        <li>
+          <strong>Documentación del Análisis de Impacto:</strong> Documenta los resultados de tu análisis de impacto,
+          resaltando los escenarios de mayor preocupación y sus consecuencias.
+        </li>
+      </ul>
     </div>
     <div class="pagina">
 
+      <h2></h2>
+
+      7. Determinación de riesgo:
+
+La determinación de riesgo implica calcular el nivel de riesgo asociado a cada amenaza identificada. Este cálculo se basa en la probabilidad de ocurrencia y el impacto que discutimos en los pasos anteriores. Aquí tienes cómo llevar a cabo esta etapa:
+
+Calcular el Riesgo: Calcula el riesgo para cada amenaza multiplicando la probabilidad de ocurrencia (estimada en el paso 5) por el impacto (evaluado en el paso 6). La fórmula básica sería: Riesgo = Probabilidad x Impacto.
+
+Clasificar el Riesgo: Clasifica el nivel de riesgo resultante en una escala, como bajo, moderado o alto, para cada amenaza. Esta clasificación se basa en umbrales predefinidos que tu organización puede establecer.
+
+Priorizar el Riesgo: Prioriza las amenazas según su nivel de riesgo. Esto te ayudará a identificar las amenazas que requieren una atención inmediata y aquellas que pueden abordarse en un segundo plano.
+
+Documentación del Riesgo: Documenta los resultados de la determinación de riesgo en un formato que sea fácil de entender para las partes interesadas. Esto puede incluir tablas, gráficos o informes que resuman los niveles de riesgo para cada amenaza.
+
+Comunicación de Riesgos: Comunica los niveles de riesgo a las partes interesadas y asegúrate de que todos comprendan cuáles son las amenazas más críticas y los riesgos asociados.
+
+Revisión Continua: Recuerda que el riesgo puede cambiar con el tiempo debido a factores como la evolución de las amenazas, las actualizaciones del sistema y las medidas de mitigación implementadas. Por lo tanto, es importante revisar regularmente la determinación de riesgo y actualizarla según sea necesario.
       <h2>Paso 8: Copias de seguridad y recuperación</h2>
       <h4>
         8.1. Establecer un plan de copias de seguridad regulares que incluya la base de datos y los archivos del sitio
@@ -183,7 +328,8 @@
       <h4>9.1. Capacitar a los administradores y usuarios sobre buenas prácticas de seguridad.</h4>
       <h4>9.2. Fomentar la identificación de posibles amenazas y cómo informarlas.</h4>
       <h2>Paso 10: Documentación y seguimiento</h2>
-      <h4>10.1. Documentar todos los hallazgos, recomendaciones y acciones tomadas durante el análisis de seguridad.</h4>
+      <h4>10.1. Documentar todos los hallazgos, recomendaciones y acciones tomadas durante el análisis de seguridad.
+      </h4>
       <h4>
         10.2. Establecer un programa de seguimiento y revisión periódica para garantizar que las medidas de seguridad se
         mantengan actualizadas.

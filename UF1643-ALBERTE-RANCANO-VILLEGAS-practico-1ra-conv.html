@@ -10,39 +10,88 @@
 </head>
 
 <body>
-
   <main>
-    <h1>Plan para el análisis de seguridad de un si basado en Wordpress</h1>
-    <h2>Enunciado:</h2>
-    <h3><span style="font-size: larger;">1. </span>Elabora un plan para el análisis de seguridad de un sistema de
-      información basado en
-      Wordpress.</h3>
-    <div>
+    <div class="pagina">
+      <h1>Plan para el análisis de seguridad de un si basado en Wordpress</h1>
+      <h2>Enunciado:</h2>
+      <h3><span style="font-size: larger;">1. </span>Elabora un plan para el análisis de seguridad de un sistema de
+        información basado en
+        Wordpress.</h3>
       <h2>Paso 1: Recopilación de información</h2>
-      <h4>1.1. Una única instalación de wordpress, en la versión 6.3.1, montada sobre un Apache2
-        utilizando como SGBD Phpmyadmin con PHP 8.1.2 y como BBDD Mariadb Ver 15.1.
-      </h4>
-      <h4>1.2. Identificación de plugins y temas instalados, así como sus versiones.</h4>
+      <h4> Habrá que llevar a cabo las siguientes indicaciones:</h4>
       <ul>
-        <li><strong>Tema: </strong>Color NewsmagazineVersión en la verión 1.2.7</li>
-        <li><strong>Plugins: </strong>Yoast SEO 21.1, Protección Anti-Spam Akismet 5.2, WooCommerce 1.23.10 y
-          Wordfence Security 7.10.3</li>
+        <li><strong>Identificar Usuarios y Roles: </strong>Identifica a todos los usuarios que interactúan con el
+          sistema y asigna roles
+          y privilegios específicos a cada uno</li>
+
+        <li><strong>Documentar Políticas de Seguridad:</strong> evisa y documenta todas las políticas de seguridad
+          existentes en
+          el sistema, como políticas de contraseñas, políticas de acceso y políticas de retención de datos.
+        </li>
+        <li><strong>Evaluar Procesos de Negocio:</strong> i el sistema está vinculado a procesos de negocio, evalúa cómo
+          el
+          sistema contribuye a esos procesos y cómo los procesos impactan en la seguridad del sistema.</li>
+        <li><strong>Inventario de Datos Sensibles</strong> Identifica y clasifica los datos sensibles o críticos que se
+          almacenan o procesan en el sistema. Esto puede incluir datos personales, financieros o cualquier otro tipo de
+          información confidencial.</li>
+        <li><strong>Identificar Recursos Críticos</strong> Enumera los recursos críticos para el funcionamiento del
+          sistema, como servidores, bases de datos, aplicaciones específicas y cualquier elemento que, si falla, podría
+          tener un impacto significativo en la operación.</li>
+        <li><strong>Flujos de Datos</strong> Mapea los flujos de datos a través del sistema para comprender cómo se
+          mueve la información entre los componentes y los usuarios.</li>
+        <li><strong>Identificar Dependencias Externas</strong> Identifica cualquier servicio, componente o sistema
+          externo en el que el sistema confía, como servicios de terceros, APIs o servicios en la nube. </li>
+        <li><strong>Historial de Incidentes</strong> Revise el historial de incidentes y problemas anteriores
+          relacionados con el sistema para obtener información sobre problemas de seguridad previos.</li>
+        <li><strong>Diagrama de Red:</strong> Si el sistema está en una red, crea un diagrama de red que muestre la
+          topología de la red y cómo el sistema se relaciona con otros sistemas y dispositivos.</li>
       </ul>
 
-      <h2>Paso 2: Evaluación de vulnerabilidades</h2>
+      <h2>Paso 2: Identificación de amenazas</h2>
+      <p>
+        La identificación de amenazas implica identificar los eventos o escenarios que pueden poner en peligro la
+        seguridad del sistema.
+      </p>
+      <p>Los etapas para la deteccion de amenazas son los siguientes</p>
+      <ul>
+        <li><strong>Identifica y enumera las amenazas cibernéticas específicas</strong> que podrían afectar al sistema.
+          Esto puede
+          incluir:
+          <ol>
+            <li>Ataques de fuerza bruta.</li>
+            <li>Ataques de inyección SQL en WordPress o phpMyAdmin.</li>
+            <li>Ataques de denegación de servicio (DDoS) contra el servidor Apache2.</li>
+            <li>Malware y virus que podrían infectar el sistema.</li>
+          </ol>
+        </li>
+        <li>Considera amenazas físicas, como incendios, inundaciones, robos o daños en el hardware del servidor</li>
+        <li>Incluye amenazas relacionadas con errores humanos, como la configuración incorrecta de permisos de archivo,
+          contraseñas débiles o la posibilidad de que un empleado realice acciones maliciosas.</li>
+        <li>Examina las amenazas internas, que pueden ser tanto intencionales como no intencionales</li>
+        <li>Considera amenazas relacionadas con el cumplimiento de normativas y regulaciones, como multas por
+          incumplimiento de la privacidad de datos.</li>
+        <li>Identifica amenazas externas, como la posibilidad de que un atacante externo comprometa la seguridad a
+          través de Internet.</li>
+        <li>Evalúa las amenazas naturales, como terremotos, tormentas o inundaciones, que podrían afectar la ubicación
+          física del sistema.</li>
+        <li><strong>Escenarios de Amenaza:</strong> Para cada amenaza identificada, crea escenarios de amenaza específicos que describan
+          cómo podría ocurrir la amenaza y qué impacto tendría en el sistema.</li>
+        <li><strong>Priorización de Amenazas:</strong> Clasifica las amenazas identificadas según su probabilidad de ocurrencia y su impacto en el sistema. Esto ayudará a centrar tus esfuerzos en las amenazas más críticas.</li>
+      </ul>
+
+
+      <h2>Paso 3: Identificación de vulnerabilidades</h2>
       <h4>
-        2.1. Utilizando herramientas de escaneo de seguridad como Wordfence Security para identificar vulnerabilidades
+        2.2. Utilizando herramientas de escaneo de seguridad como Wordfence Security para identificar vulnerabilidades
         conocidas en WordPress y sus componentes (plugins, temas, núcleo).
       </h4>
-      <p><strong>Wordfence Security (Plugin de WordPress):</strong> es un popular plugin de seguridad para WordPress que
-        incluye un escáner de seguridad en tiempo real. Puede escanear tu sitio web en busca de vulnerabilidades
+      <p><strong>Wordfence Security (Plugin de WordPress):</strong> es un popular plugin de seguridad para WordPress
+        que incluye un escáner de seguridad en tiempo real. Puede escanear tu sitio web en busca de vulnerabilidades
         conocidas, malware y otros problemas de seguridad. Además, ofrece cortafuegos y otras características de
         seguridad.</p>
-
-      <h4>2.2. Verificar si se están utilizando versiones actualizadas de WordPress, plugins y temas.</h4>
-      <h4>2.3. Realizar pruebas de penetración para descubrir vulnerabilidades no conocidas.</h4>
+      <h4>2.3. Verificar si se están utilizando versiones actualizadas de WordPress, plugins y temas.</h4>
+      <h4>2.4. Realizar pruebas de penetración para descubrir vulnerabilidades no conocidas.</h4>
       <p>Para ello se seguiran los siguientes pasos</p>
-
       <ul>
         <li><strong>Paso 1:</strong> Definir el alcance de las pruebas</li>
         <li><strong>Paso 2:</strong> Obtener el consentimiento y autorización</li>
@@ -64,26 +113,27 @@
             </li>
         </li>
       </ul>
-      <li><strong>Paso 6:</strong> Documentar resultados:</li>
-      <li><strong>Paso 7:</strong> Informar y remediar:</li>
-      <li><strong>Paso 8:</strong> Realizar pruebas de confirmación:</li>
+      <li><strong>Paso 6:</strong> Documentar resultados</li>
+      <li><strong>Paso 7:</strong> Informar y remediar</li>
+      <li><strong>Paso 8:</strong> Realizar pruebas de confirmación</li>
       <li><strong>Paso 9:</strong> Revisión continua</li>
-
       </ul>
+    </div>
 
-      <h2>Paso 3: Análisis de configuración</h2>
+    <div class="pagina">
+      <h2>Paso 4: Analizarla configuración</h2>
       <p>
-        <strong>3.1. Revisar la configuración de WordPress:</strong> garantizar que las mejores prácticas de
+        <strong>4.1. Revisar la configuración de WordPress:</strong> garantizar que las mejores prácticas de
         seguridad se estén siguiendo, como la restricción de acceso a archivos sensibles, la deshabilitación de la
         edición de archivos desde el panel de administración, entre otros.
       </p>
       <p>
-        <strong>3.2. Evaluar la configuración de permisos en archivos y directorios</strong> para asegurarse de que los
+        <strong>4.2. Evaluar la configuración de permisos en archivos y directorios</strong> para asegurarse de que los
         usuarios no autorizados no tengan acceso a información crítica.
       </p>
 
-      <h2>Paso 4: Evaluación de plugins y temas</h2>
-      <h4>4.1. Realizar una auditoría de todos los plugins y temas instalados en busca de vulnerabilidades conocidas o
+      <h2>Paso 5: Evaluar los plugins y los temas</h2>
+      <h4>5.1. Realizar una auditoría de todos los plugins y temas instalados en busca de vulnerabilidades conocidas o
         problemas de seguridad.</h4>
       <p>Desde el panel de control de Wordpress, ir al listado de plugins y temas, y verificar de forma infividual
         cada uno de ellos, y realizar los siguientes pasos:
@@ -98,44 +148,63 @@
       </ul>
 
 
-      <h2>Paso 5: Gestión de usuarios y contraseñas</h2>
-      <h4>5.1. Revisar la lista de usuarios registrados en WordPress y eliminar cuentas innecesarias o no autorizadas.</h4>
-      <p>Como podrían ser usuario antiguos que ya no forman parte del cms, cuentas de spam, cuentas dublicadas, e.t.c.</p>
-      <h4>5.2. Fomentar el uso de contraseñas seguras y políticas de contraseña robustas.</h4>
-      <p>Mediante el uso de algun plugin se puede facilitar este proces. Por ejemplo con el plugin SecuPress</p>
-      <h4>
-        5.3. Considerar la implementación de autenticación de dos factores (2FA) para los usuarios con privilegios
-        elevados.
+      <h2>Paso 6: Gestionar usuarios y contraseñas</h2>
+      <h4>6.1. Revisar la lista de usuarios registrados en WordPress y eliminar cuentas innecesarias o no autorizadas.
       </h4>
-      
-      Paso 6: Seguridad de la red y el servidor
-      6.1. Configurar reglas de firewall para limitar el tráfico no deseado.
-      6.2. Mantener el servidor y su software actualizado con parches de seguridad.
-      6.3. Considerar la implementación de un servicio de monitoreo de seguridad para detectar intrusiones.
+      <p>Como por ejemplo usuario antiguos que ya no forman parte del cms, cuentas de spam, cuentas duplicadas, e.t.c.
+      </p>
+      <h4>6.2. Fomentar el uso de contraseñas seguras y políticas de contraseña robustas.</h4>
+      <p>Mediante el uso de algun plugin se puede facilitar este proces. Por ejemplo con el plugin SecuPress.
+        Considerar la implementación de autenticación de dos factores (2FA) para los usuarios con privilegios
+        elevados.</p>
 
-      Paso 7: Copias de seguridad y recuperación
-      7.1. Establecer un plan de copias de seguridad regulares que incluya la base de datos y los archivos del sitio
-      web.
-      7.2. Probar regularmente la restauración de copias de seguridad para asegurarse de que el proceso funcione
-      correctamente.
+      <h2>Paso 7: Seguridad de la red y el servidor</h2>
+      <h4>7.1. Configurar reglas de firewall para limitar el tráfico no deseado.</h4>
+      <p>En el análisis de seguridad, la configuración de reglas de firewall es esencial para controlar el tráfico no
+        deseado en el sistema basado en WordPress. Esto implica establecer reglas de entrada y salida para permitir el
+        tráfico necesario y bloquear el tráfico no autorizado. También se deben considerar reglas específicas para
+        aplicaciones de WordPress y servicios adicionales, junto con la monitorización constante y ajustes según sea
+        necesario para mantener un nivel óptimo de seguridad.</p>
+      <h4>7.2. Mantener el servidor y su software actualizado con parches de seguridad.</h4>
+      <h4>7.3. Considerar la implementación de un servicio de monitoreo de seguridad para detectar intrusiones.</h4>
 
-      Paso 8: Educación y concienciación
-      8.1. Capacitar a los administradores y usuarios sobre buenas prácticas de seguridad.
-      8.2. Fomentar la identificación de posibles amenazas y cómo informarlas.
+    </div>
+    <div class="pagina">
 
-      Paso 9: Documentación y seguimiento
-      9.1. Documentar todos los hallazgos, recomendaciones y acciones tomadas durante el análisis de seguridad.
-      9.2. Establecer un programa de seguimiento y revisión periódica para garantizar que las medidas de seguridad se
-      mantengan actualizadas.
+      <h2>Paso 8: Copias de seguridad y recuperación</h2>
+      <h4>
+        8.1. Establecer un plan de copias de seguridad regulares que incluya la base de datos y los archivos del sitio
+        web.
+      </h4>
+      <h4>8.2. Probar regularmente la restauración de copias de seguridad para asegurarse de que el proceso funcione
+        correctamente.</h4>
 
-      Paso 10: Implementación de medidas correctivas
-      10.1. Implementar las recomendaciones y medidas correctivas identificadas durante el análisis.
-      10.2. Realizar pruebas posteriores a la implementación para verificar la efectividad de las soluciones aplicadas.
+      <h2>Paso 9: Educación y concienciación</h2>
+      <h4>9.1. Capacitar a los administradores y usuarios sobre buenas prácticas de seguridad.</h4>
+      <h4>9.2. Fomentar la identificación de posibles amenazas y cómo informarlas.</h4>
+      <h2>Paso 10: Documentación y seguimiento</h2>
+      <h4>10.1. Documentar todos los hallazgos, recomendaciones y acciones tomadas durante el análisis de seguridad.</h4>
+      <h4>
+        10.2. Establecer un programa de seguimiento y revisión periódica para garantizar que las medidas de seguridad se
+        mantengan actualizadas.
+      </h4>
+      <h2>Paso 11: Implementación de medidas correctivas</h2>
+      <h4>11.1. Implementar las recomendaciones y medidas correctivas identificadas durante el análisis.</h4>
+      <h4>11.2. Realizar pruebas posteriores a la implementación para verificar la efectividad de las soluciones
+        aplicadas.</h4>
+      <h2>Paso 12: Monitoreo continuo</h2>
+      <h4>12.1. Establecer un sistema de monitoreo continuo para detectar y responder a amenazas en tiempo real.</h4>
+      <p>Una buena implementación poría ser un SIEM (Security Information and Event Management)</p>
+      <p> Configurar una solución SIEM, como Splunk o Elastic SIEM, que recopile, correlacione y analice registros de
+        seguridad y eventos en tiempo real. Esta herramienta puede alertar sobre actividades sospechosas, como intentos
+        de inicio de sesión fallidos, accesos no autorizados o cambios en archivos críticos. Además, puede automatizar
+        respuestas a incidentes, como el bloqueo de direcciones IP maliciosas o la notificación de alertas a un equipo
+        de seguridad.</p>
+      <h4>
+        12.2. Mantenerse actualizado sobre las nuevas vulnerabilidades y amenazas de seguridad que puedan afectar a
+        WordPress y sus componentes.
+      </h4>
 
-      Paso 11: Monitoreo continuo
-      11.1. Establecer un sistema de monitoreo continuo para detectar y responder a amenazas en tiempo real.
-      11.2. Mantenerse actualizado sobre las nuevas vulnerabilidades y amenazas de seguridad que puedan afectar a
-      WordPress y sus componentes.
     </div>
 
 
